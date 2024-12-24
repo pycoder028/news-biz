@@ -10,8 +10,8 @@
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
                     <a href="{{ route('home') }}" class="nav-item nav-link @if ($page == 'home') active @endif">Home</a>
-                    <a href="category.html" class="nav-item nav-link">Category</a>
-                    <a href="single.html" class="nav-item nav-link">Single News</a>
+                    <a href="{{ route('category') }}" class="nav-item nav-link @if ($page == 'category') active @endif">Category</a>
+                    <a href="{{ route('post') }}" class="nav-item nav-link  @if ($page == 'post') active @endif">Single News</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                         <div class="dropdown-menu rounded-0 m-0">
@@ -20,7 +20,7 @@
                             <a href="#" class="dropdown-item">Menu item 3</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="{{ route('contact') }}" class="nav-item nav-link @if ($page == 'contact') active @endif">Contact</a>
                     <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
                     <a href="{{ route('register') }}" class="nav-item nav-link">Register</a>
                 </div>

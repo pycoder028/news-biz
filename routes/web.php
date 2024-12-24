@@ -2,7 +2,10 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\Frontend\CategoryController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +26,9 @@ use Illuminate\Support\Facades\Route;
 }); */
 
 Route::get('/',[HomeController::class, 'home'])->name('home');
+Route::get('/category',[CategoryController::class, 'index'])->name('category');
+Route::get('/single-post',[PostController::class, 'index'])->name('post');
+Route::get('/contact',[ContactController::class, 'index'])->name('contact');
 
 
 
